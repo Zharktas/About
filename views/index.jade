@@ -1,5 +1,30 @@
 extends layout
 
-block content
-	h1= title
-	p Welcome to #{title}
+block publications
+	div#publications
+		h1 Publications
+		ul 
+			li Master's thesis (in finnish) 
+					a(href="http://urn.fi/URN:NBN:fi:tty-2011122014956") Developing interactive web applications.
+			li Bachelor's thesis (in finnish) 
+					a(href="http://cheese.caek.fi/~zharktas/kandi.pdf") Security in Ajax enabled web applications.
+	
+block me
+	div#me
+		h1 Me
+	
+block work
+	div#work
+		h1 Work
+
+block social
+	div#social	
+		h1(onclick="console.log(\"hiding\")") Social networks	
+		a(href="http://trakt.tv/user/Zharktas") 
+			img(alt="trakt.tv", src="http://trakt.tv/user/Zharktas/widgets/watched/all-fanart.jpg")
+
+block content	
+	block me
+	block work
+	block publications
+	block social
